@@ -1,5 +1,5 @@
-# CHORD protocol (Work in progress)
-Distributed hash table
+# CHORD protocol
+A scalable peer-to-peer lookup service for internet applications}
 
 ## Details
   
@@ -21,4 +21,15 @@ Chord nodes reveive JSON request messages from the coordinator or other Chord no
     {"do": "remove", "data": { "key" : "a key" }, "reply-to": address} instructing the receipient node to remove the (key,value) pair from the ring.
     {"do": "list-items", "reply-to": address} instructing the receipient node to respond with a list of the key-value pairs stored at its bucket. 
 
-
+## References:
+~~~
+@inproceedings{consistenthashing,
+  title = {Chord: A scalable peer-to-peer lookup service for internet applications},
+  author = {Ion Stoica, Robert Morris, David Karger, M. Frans Kaashoek and Hari Balakrishnan}, 
+  booktitle = {Proceedings of the 2001 conference on Applications, technologies, architectures, and protocols for computer communications},
+  series = {SIGCOMM '01},
+  year = {2001},
+  location = {California, USA},
+  pages = {149-160}
+}
+~~~
